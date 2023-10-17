@@ -1,4 +1,4 @@
-blue-cross = overlay-xy(rectangle(20, 160, "solid", "dark-blue"), -70, 70, rectangle(220, 20, "solid", "dark-blue"))
-white-cross = overlay-xy(rectangle(40, 160, "solid", "white"), -60, 60, rectangle(220, 40, "solid", "white"))
+blue-cross = overlay-onto-offset(rectangle(220, 20, "solid", "dark-blue"),"middle", "middle",-20, 0, rectangle(20, 160, "solid", "dark-blue"), "middle", "middle")
+white-cross = overlay-onto-offset(rectangle(220, 40, "solid", "white"),"middle", "middle",-20, 0, rectangle(40, 160, "solid", "white"), "middle", "middle")
 
-overlay-align("left", "middle", overlay(blue-cross, white-cross), rectangle(220, 160, "solid", "crimson"))
+overlay(rectangle(220, 160, "outline", "black"), overlay(overlay(blue-cross, white-cross), rectangle(220, 160, "solid", "crimson")))
