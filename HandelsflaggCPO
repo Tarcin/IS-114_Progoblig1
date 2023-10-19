@@ -1,4 +1,13 @@
-blue-cross = overlay-onto-offset(rectangle(220, 20, "solid", "dark-blue"),"middle", "middle",-20, 0, rectangle(20, 160, "solid", "dark-blue"), "middle", "middle")
-white-cross = overlay-onto-offset(rectangle(220, 40, "solid", "white"),"middle", "middle",-20, 0, rectangle(40, 160, "solid", "white"), "middle", "middle")
+blue-cross = overlay-xy(rectangle(220, 20, "solid", "dark blue"), 70, -70, rectangle(20, 160, "solid", "dark blue"))
 
-overlay(rectangle(220, 160, "outline", "black"), overlay(overlay(blue-cross, white-cross), rectangle(220, 160, "solid", "crimson")))
+white-cross = overlay-xy(rectangle(220, 40, "solid", "white"), 60, -60, rectangle(40, 160, "solid", "white"))
+
+combined-cross = overlay(blue-cross, white-cross)
+
+flag = overlay(combined-cross, rectangle(220, 160, "solid", "crimson"))
+
+flag
+
+framed-flag = overlay(rectangle(220, 160, "outline", "black"), flag)
+
+framed-flag
